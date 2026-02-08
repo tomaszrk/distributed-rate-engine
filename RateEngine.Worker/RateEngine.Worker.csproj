@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-RateEngine.Worker-defe0ab9-1016-467e-aa9c-9879df6137ea</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="13.1.0" />
+    <PackageReference Include="Aspire.RabbitMQ.Client" Version="13.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Resilience" Version="10.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RateEngine.Domain\RateEngine.Domain.csproj" />
+    <ProjectReference Include="..\RateEngine.Infrastructure\RateEngine.Infrastructure.csproj" />
+    <ProjectReference Include="..\RateEngine.ServiceDefaults\RateEngine.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>
